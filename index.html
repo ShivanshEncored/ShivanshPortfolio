@@ -1180,7 +1180,7 @@ function startMotion() {
   }
 
   /* hero: entrance, typed heading, parallax */
-  const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.9 });
+  const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.9, onComplete: initHeroScroll });
   heroTl
     .from('.reveal-hero', { y: 40, opacity: 0, duration: 1, stagger: 0.09 }, 0.15)
     .from('.hero-stage', { scale: 0.9, opacity: 0, duration: 1.2, ease: 'power2.out' }, 0.3)
@@ -1194,9 +1194,14 @@ function startMotion() {
   headline.innerHTML = headline.textContent.trim().split(' ').map(w => `<span class="word"><span>${w}&nbsp;</span></span>`).join('');
   heroTl.from('#heroHeadline .word > span', { yPercent: 110, duration: 0.9, stagger: 0.07, ease: 'power4.out' }, 0.55);
 
-  gsap.to('.hero-stage', { y: 70, scale: 0.96, opacity: 0.4, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
-  gsap.to('.hero-name, .hero-headline, .hero-copy, .hero-ctas', { y: -40, opacity: 0, ease: 'none', scrollTrigger: { trigger: '.hero', start: '20% top', end: '70% top', scrub: true } });
-
+  function initHeroScroll() {
+  gsap.fromTo('.hero-stage', { y: 0, scale: 1, opacity: 1 },
+    { y: 70, scale: 0.96, opacity: 0.4, ease: 'none', immediateRender: false,
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  gsap.fromTo('.hero-name, .hero-headline, .hero-copy, .hero-ctas', { y: 0, opacity: 1 },
+    { y: -40, opacity: 0, ease: 'none', immediateRender: false,
+      scrollTrigger: { trigger: '.hero', start: '20% top', end: '70% top', scrub: true } });
+}
   /* panels open with a soft clip reveal; everything else fades up */
   $$('.project-card,.contact-form').forEach(el => {
     el.classList.remove('reveal');
