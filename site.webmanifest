@@ -1,0 +1,36 @@
+{
+  "name": "Shivansh Tiwari — AI & Financial Markets Portfolio",
+  "short_name": "Shivansh Encored",
+  "description": "Personal portfolio of Shivansh Tiwari (Shivansh Encored) — Building the future of AI in financial markets and next-gen fintech.",
+  "start_url": "/ShivanshPortfolio/",
+  "scope": "/ShivanshPortfolio/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f9f8ff",
+  "theme_color": "#5b4dff",
+  "icons": [
+    {
+      "src": "img.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "CYBERPIC.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "education",
+    "finance",
+    "technology",
+    "portfolio"
+  ]
+}

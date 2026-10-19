@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" fill="none">
+  <defs>
+    <linearGradient id="cubeTop1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5b4dff"/>
+      <stop offset="100%" stop-color="#ff3d8a"/>
+    </linearGradient>
+    <linearGradient id="cubeLeft1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b2ec9"/>
+      <stop offset="100%" stop-color="#241a7d"/>
+    </linearGradient>
+    <linearGradient id="cubeRight1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#db2471"/>
+      <stop offset="100%" stop-color="#931349"/>
+    </linearGradient>
+    <linearGradient id="accentLime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12c47a"/>
+      <stop offset="100%" stop-color="#ffc53d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Isometric Chess & Cube Step Pattern -->
+  <!-- Cube 1 (Center Base) -->
+  <g transform="translate(250, 240)">
+    <!-- Top Face -->
+    <polygon points="0,-40 60,-5 0,30 -60,-5" fill="url(#cubeTop1)"/>
+    <!-- Left Face -->
+    <polygon points="-60,-5 0,30 0,95 -60,60" fill="url(#cubeLeft1)"/>
+    <!-- Right Face -->
+    <polygon points="0,30 60,-5 60,60 0,95" fill="url(#cubeRight1)"/>
+  </g>
+
+  <!-- Cube 2 (Top Left) -->
+  <g transform="translate(190, 140)">
+    <polygon points="0,-30 45,-4 0,22 -45,-4" fill="url(#accentLime)"/>
+    <polygon points="-45,-4 0,22 0,72 -45,46" fill="#0c8753"/>
+    <polygon points="0,22 45,-4 45,46 0,72" fill="#c79728"/>
+  </g>
+
+  <!-- Cube 3 (Top Right) -->
+  <g transform="translate(310, 140)">
+    <polygon points="0,-30 45,-4 0,22 -45,-4" fill="#ffffff" fill-opacity="0.85"/>
+    <polygon points="-45,-4 0,22 0,72 -45,46" fill="#5b4dff" fill-opacity="0.6"/>
+    <polygon points="0,22 45,-4 45,46 0,72" fill="#ff3d8a" fill-opacity="0.6"/>
+  </g>
+
+  <!-- Stepped Chess grid isometric tiles around -->
+  <g stroke="rgba(255,255,255,0.18)" stroke-width="1.2">
+    <!-- Tile 1 -->
+    <polygon points="250,60 295,85 250,110 205,85" fill="rgba(91,77,255,0.15)"/>
+    <!-- Tile 2 -->
+    <polygon points="370,240 415,265 370,290 325,265" fill="rgba(255,61,138,0.15)"/>
+    <!-- Tile 3 -->
+    <polygon points="130,240 175,265 130,290 85,265" fill="rgba(18,196,122,0.15)"/>
+    <!-- Tile 4 -->
+    <polygon points="250,380 295,405 250,430 205,405" fill="rgba(255,197,61,0.2)"/>
+  </g>
+
+  <!-- Dynamic connecting grid paths -->
+  <path d="M130,240 L190,170 L250,240 L310,170 L370,240 L250,380 Z" stroke="url(#cubeTop1)" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+</svg>

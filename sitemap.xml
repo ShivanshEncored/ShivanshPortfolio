@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://shivanshencored.github.io/ShivanshPortfolio/</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-10-19T22:45:00+05:30</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://shivanshencored.github.io/ShivanshPortfolio/img.png</image:loc>
+      <image:title>Shivansh Tiwari - Founder and AI Fintech Innovator Portrait</image:title>
+      <image:caption>Official portrait of Shivansh Tiwari (Shivansh Encored), building AI for financial markets.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://shivanshencored.github.io/ShivanshPortfolio/CYBERPIC.png</image:loc>
+      <image:title>Shivansh Encored Cyber Aesthetic Artwork</image:title>
+      <image:caption>Visual branding and cyber aesthetic avatar for Shivansh Encored.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://shivanshencored.github.io/ShivanshPortfolio/project-diagram.svg</image:loc>
+      <image:title>AI and Market Intelligence Neural Diagram</image:title>
+      <image:caption>Autonomous trading algorithms and real-time financial sentiment analysis architecture.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://shivanshencored.github.io/ShivanshPortfolio/hero-bg.svg</image:loc>
+      <image:title>Dynamic Geometric Motion Canvas</image:title>
+      <image:caption>Interactive background graphic with kinetic geometry and fintech nodes.</image:caption>
+    </image:image>
   </url>
 </urlset>

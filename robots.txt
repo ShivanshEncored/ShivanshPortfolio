@@ -1,4 +1,54 @@
+# ==============================================================================
+# ROBOTS.TXT — Shivansh Tiwari (Shivansh Encored) Official Portfolio
+# Canonical URL: https://shivanshencored.github.io/ShivanshPortfolio/
+# ==============================================================================
+
 User-agent: *
 Allow: /
+Allow: /index.html
+Allow: /sitemap.xml
+Allow: /site.webmanifest
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.mp3$
 
+# Disallow internal or hidden directories if any
+Disallow: /.*
+Disallow: /scratch/
+Disallow: /.git/
+
+# Googlebot specific directives
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+
+# Major Search Engine Crawlers
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap Index Declaration
 Sitemap: https://shivanshencored.github.io/ShivanshPortfolio/sitemap.xml
+Host: https://shivanshencored.github.io/ShivanshPortfolio/
