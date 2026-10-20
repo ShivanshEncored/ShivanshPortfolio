@@ -2116,6 +2116,100 @@
       box-shadow: 0 0 10px var(--lime);
     }
 
+    /* ============================================================
+       MOBILE RESPONSIVENESS FIXES (max-width: 768px ONLY)
+       Do not affect desktop. Fixes hero centering, heading overflow,
+       interests text wrapping, no horizontal scroll.
+       ============================================================ */
+    @media (max-width: 768px) {
+      /* 1. HERO IMAGE: center horizontally */
+      .hero-stage {
+        align-items: center !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100%;
+      }
+      .hero-portrait-wrap {
+        margin: 0 auto !important;
+        display: block;
+      }
+      .hero-portrait-circle img {
+        object-position: center center !important; /* ensure centered, photo otherwise untouched */
+      }
+
+      /* 2. HEADINGS BEING CUT OFF: reduce sizes, allow wrapping, no clip */
+      .hero-name,
+      .hero-headline,
+      .section-title,
+      .section-lead {
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        hyphens: auto;
+        max-width: 100%;
+      }
+      .hero-name {
+        font-size: clamp(2.1rem, 8.5vw, 3.4rem) !important; /* smaller than desktop min */
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+      }
+      .hero-headline {
+        font-size: clamp(1.35rem, 4.8vw, 1.9rem) !important;
+        line-height: 1.2;
+      }
+      .section-title {
+        font-size: clamp(1.9rem, 7vw, 2.8rem) !important;
+      }
+      .section-lead {
+        font-size: clamp(1.05rem, 3.8vw, 1.4rem) !important;
+        line-height: 1.4;
+      }
+
+      /* Prevent any right-shift / clipping on hero through projects */
+      .hero,
+      .about-section,
+      .interests-section,
+      .project-section {
+        overflow-x: hidden;
+      }
+      .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+
+      /* 3. INTERESTS SECTION CARDS: allow text wrap, no nowrap, proper padding */
+      .interests-viewport {
+        white-space: normal !important; /* override nowrap that clips text */
+      }
+      .interests-row {
+        white-space: normal !important;
+      }
+      .interest-card {
+        white-space: normal !important;
+        overflow: visible !important;
+        padding: 28px 22px !important;
+        box-sizing: border-box;
+      }
+      .interest-card h3,
+      .interest-card p {
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        word-break: break-word !important;
+        max-width: 100%;
+        display: block;
+      }
+      .interest-card p {
+        line-height: 1.55;
+      }
+
+      /* Ensure no horizontal scroll overall */
+      body, html {
+        overflow-x: hidden !important;
+      }
+    }
+
     /* Reduced Motion */
     @media (prefers-reduced-motion: reduce) {
       .loader-curtain { display: none !important; }
@@ -2261,7 +2355,8 @@
       <div class="container">
         <p class="kicker reveal">About me</p>
         <h2 class="section-title reveal">About</h2>
-        <div class="section-lead reveal">Fascinated by how technology solves meaningful problems.</div>
+        <div class="section-lead reveal">I am Shivansh Tiwari - known as Shivansh Encored on social media, an ambitious individual building an AI startup at the age of 15 to escape the 'Rat Race' and inspire others to think out of the box. Deeply focused on Artificial intelligence, machine learning architecture, financial systems, and entrepreneurship; aspires to build my own financial intitution in the long run.</div>
+        <p class="reveal" style="font-weight: 800; color: #000000; font-size: 1.1rem; margin-top: 12px; letter-spacing: 0.05em;">THIS IS JUST THE BEGINNING</p>
 
         <div class="about-layout">
           <div class="about-body">
